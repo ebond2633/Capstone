@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Rose",
+    "type": "Flower",
+    "price": 10
+  },
+  {
+    "id": 2,
+    "name": "Tulip",
+    "type": "Flower",
+    "price": 8
+  },
+  {
+    "id": 3,
+    "name": "Oak",
+    "type": "Tree",
+    "price": 20
+  },
+  {
+    "id": 4,
+    "name": "Pine",
+    "type": "Tree",
+    "price": 15
+  },
+  {
+    "id": 5,
+    "name": "Basil",
+    "type": "Herb",
+    "price": 5
+  },
+  {
+    "id": 6,
+    "name": "Mint",
+    "type": "Herb",
+    "price": 4
+  },
+  {
+    "id": 7,
+    "name": "Cactus",
+    "type": "Succulent",
+    "price": 12
+  },
+  {
+    "id": 8,
+    "name": "Aloe Vera",
+    "type": "Succulent",
+    "price": 10
+  },
+  {
+    "id": 9,
+    "name": "Fern",
+    "type": "Fern",
+    "price": 7
+  },
+  {
+    "id": 10,
+    "name": "Bamboo",
+    "type": "Grass",
+    "price": 9
+  }
+]

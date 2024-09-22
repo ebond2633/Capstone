@@ -17,4 +17,8 @@ public class Plants {
     private String name;
     private String description;
     private String  image_url;
+
+    @ManyToOne
+    @JoinColumn(name = "creator_id", nullable = false)
+    private User creator;
 }
