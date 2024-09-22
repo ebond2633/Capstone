@@ -2,10 +2,23 @@ import React from 'react';
 
 function Home() {
   return (
-     <h1 className="text-3xl font-bold underline text-center bg-pink-500">
-    Hello world to Verdant Elegance!
-  </h1>
-  )
+     <Navbar>
+       <Title>
+         Welcome to Verdant Elegance!
+      </Title>
+       <NavLinks>
+         <NavLink href="#home">Home</NavLink>
+         <NavLink href="#about">About</NavLink>
+         <NavLink href="#services">Services</NavLink>
+         <NavLink href="#contact">Contact</NavLink>
+       </NavLinks>
+      <div>
+        {/* <AiOutlineClose size={20}/> */}
+       </div>
+     </Navbar>
+  );
 }
+
+
 
 export default Home;
