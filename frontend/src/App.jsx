@@ -6,6 +6,7 @@ import Login from './components/Login'
 import SignUp from './components/SignUp'
 import Cart from './components/Cart'
 import Products from './components/Products'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
@@ -13,15 +14,17 @@ function App() {
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow">
-          <Routes>
+           <Navbar/>
+          {/* <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/products" element={<Products/>} />
-          </Routes>
+          </Routes> */}
         </main>
         <Footer />
+       
       </div>
     </Router>
   )

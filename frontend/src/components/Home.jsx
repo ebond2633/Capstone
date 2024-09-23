@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import PlantCard from '../components/PlantCard'
 
 export default function Home() {
@@ -27,13 +28,28 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Welcome to Plant Shop</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {plants.map(plant => (
-          <PlantCard key={plant.id} plant={plant} />
-        ))}
-      </div>
+    <div className="flex flex-col min-h-screen bg-green-100">
+      <header className="bg-green-600 text-white p-4 sticky top-0 z-10">
+        <div className="container mx-auto flex justify-between items-center">
+          <h1 className="text-2xl font-bold text-pink-300">Verdant Elegance</h1>
+          
+        </div>
+      </header>
+
+      <main className="flex-grow container mx-auto px-4 py-8">
+        <h2 className="text-3xl font-bold mb-8 text-green-800 text-center">Welcome to Verdant Elegance</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          {plants.map(plant => (
+            <PlantCard key={plant.id} plant={plant} />
+          ))}
+        </div>
+      </main>
+
+      <footer className="bg-green-600 text-white p-4">
+        <div className="container mx-auto text-center">
+          <p>&copy; 2023 Verdant Elegance. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   )
 }
