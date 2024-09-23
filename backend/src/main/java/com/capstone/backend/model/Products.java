@@ -1,24 +1,30 @@
 package com.capstone.backend.model;
+
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-@NoArgsConstructor
 @Data
+@NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name="plants")
-public class Plants {
+@Table(name = "products")
+public class Products {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer price;
-    private String name;
-    private String description;
-    private String  image_url;
+    private Integer productID;
 
-    @ManyToOne
-    @JoinColumn(name = "creator_id", nullable = false)
-    private User creator;
+    @Column(nullable = false)
+    private String name;
+
+    @Column(nullable = false)
+    private String description;
+
+    @Column(nullable = false)
+    private String img_url;
+
+    @Column(nullable = false)
+    private Double price;
 }

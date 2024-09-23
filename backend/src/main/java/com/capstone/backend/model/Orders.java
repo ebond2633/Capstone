@@ -5,20 +5,31 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Set;
+import java.util.Date;
 
-@AllArgsConstructor
-@NoArgsConstructor
 @Data
-@Table(name="orders")
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
+@Table(name = "orders")
 public class Orders {
 
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private Integer price;
-    private String name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer orderId;
 
-    @ManyToMany(fetch = FetchType.EAGER)
-    private Set<User> users;
+    @Column(nullable = false)
+    @Temporal(TemporalType.DATE)
+    private Date date;
+
+    @Column(nullable = false)
+    private Double total_amt;
+
+    @ManyToOne
+    @JoinColumn(name = "user_id", nullable = false)
+    private Users user;
+
+    @ManyToOne
+    @JoinColumn(name = "product_id", nullable = false)
+    private Products product;
 }

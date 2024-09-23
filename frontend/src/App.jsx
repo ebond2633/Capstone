@@ -1,22 +1,27 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import Home from './components/Home';
-import Navbar from './components/Home';
-import Styled from './components/Styled';
-
-import './App.css'
-
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Header from './components/Header'
+import Footer from './components/Footer'
+import Home from './components/Home'
+import Login from './components/Login'
+import SignUp from './components/SignUp'
+import Cart from './components/Cart'
 
 function App() {
-  //  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <Styled/>
-    <Navbar/>
-    <Home/>
-    </>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Header />
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/cart" element={<Cart />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
+    </Router>
   )
 }
 

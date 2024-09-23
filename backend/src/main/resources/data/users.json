@@ -46,7 +46,7 @@
     "email": "user6@example.com",
     "enabled": true,
     "roles": ["USER"]
-  }
+  },
   {
     "id": 7,
     "username": "user7",
