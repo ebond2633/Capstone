@@ -1,0 +1,12 @@
+[
+  { "productID": 1, "name": "Product 1", "description": "Description 1", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115210/Spider_plant_ai4enz.jpg", "price": 10.0 },
+  { "productID": 2, "name": "Product 2", "description": "Description 2", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115210/Spider_plant_ai4enz.jpg", "price": 20.0 },
+  { "productID": 3, "name": "Product 3", "description": "Description 3", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727114961/English_Ivy_Plant_fc2gw5.jpg", "price": 30.0 },
+  { "productID": 4, "name": "Product 4", "description": "Description 4", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115032/front_page_trjorl.jpg", "price": 40.0 },
+  { "productID": 5, "name": "Product 5", "description": "Description 5", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727114989/Aloe_Vera_lqfiaz.jpg", "price": 50.0 },
+  { "productID": 6, "name": "Product 6", "description": "Description 6", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118096/Shop_nwngru.jpg", "price": 60.0 },
+  { "productID": 7, "name": "Product 7", "description": "Description 7", "img_url": "hhttps://res.cloudinary.com/dfq4l5osv/image/upload/v1727118096/Shop_nwngru.jpg", "price": 70.0 },
+  { "productID": 8, "name": "Product 8", "description": "Description 8", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118073/Snake_muy125.jpg", "price": 80.0 },
+  { "productID": 9, "name": "Product 9", "description": "Description 9", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115210/Spider_plant_ai4enz.jpg", "price": 90.0 },
+  { "productID": 10, "name": "Product 10", "description": "Description 10", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115164/office_plant_refcax.jpg", "price": 100.0 }
+]
