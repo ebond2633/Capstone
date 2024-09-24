@@ -1,12 +1,12 @@
 [
-  { "id": 1, "name": "John Doe", "email": "john.doe@example.com", "password": "password1" },
-  { "id": 2, "name": "Jane Smith", "email": "jane.smith@example.com", "password": "password2" },
-  { "id": 3, "name": "Alice Johnson", "email": "alice.johnson@example.com", "password": "password3" },
-  { "id": 4, "name": "Bob Brown", "email": "bob.brown@example.com", "password": "password4" },
-  { "id": 5, "name": "Charlie Davis", "email": "charlie.davis@example.com", "password": "password5" },
-  { "id": 6, "name": "Diana Evans", "email": "diana.evans@example.com", "password": "password6" },
-  { "id": 7, "name": "Eve Foster", "email": "eve.foster@example.com", "password": "password7" },
-  { "id": 8, "name": "Frank Green", "email": "frank.green@example.com", "password": "password8" },
-  { "id": 9, "name": "Grace Harris", "email": "grace.harris@example.com", "password": "password9" },
-  { "id": 10, "name": "Henry Irving", "email": "henry.irving@example.com", "password": "password10" }
+  {"name": "John Doe", "email": "john.doe@example.com", "password": "password1" },
+  {"name": "Jane Smith", "email": "jane.smith@example.com", "password": "password2" },
+  {"name": "Alice Johnson", "email": "alice.johnson@example.com", "password": "password3" },
+  {"name": "Bob Brown", "email": "bob.brown@example.com", "password": "password4" },
+  {"name": "Charlie Davis", "email": "charlie.davis@example.com", "password": "password5" },
+  {"name": "Diana Evans", "email": "diana.evans@example.com", "password": "password6" },
+  {"name": "Eve Foster", "email": "eve.foster@example.com", "password": "password7" },
+  {"name": "Frank Green", "email": "frank.green@example.com", "password": "password8" },
+  {"name": "Grace Harris", "email": "grace.harris@example.com", "password": "password9" },
+  {"name": "Henry Irving", "email": "henry.irving@example.com", "password": "password10" }
 ]

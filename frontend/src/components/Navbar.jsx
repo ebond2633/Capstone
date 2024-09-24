@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+
 const Navbar = () => {
   return (
     <nav
@@ -23,30 +24,17 @@ const Navbar = () => {
           gap: '20px', // Space between buttons
         }}
       >
-        {/* <nav>
-            <ul className="flex space-x-4">
-              <li>
-                <Link to="/" className="hover:text-pink-300 transition-colors">Home</Link>
-              </li>
-              <li>
-                <Link to="/shop" className="hover:text-pink-300 transition-colors">Shop</Link>
-              </li>
-              <li>
-                <Link to="/about" className="hover:text-pink-300 transition-colors">About</Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-pink-300 transition-colors">Contact</Link>
-              </li>
-            </ul>
-          </nav> */}
-        <Link to="/" className="  nav-button">Home</Link>
+        
+        <Link to="/" className=" nav-button">Home</Link>
         <Link to="/about" className="nav-button">About</Link>
-        <Link to="/services" className="nav-button">Shop</Link>
+        <Link to="/products" className="nav-button">Products</Link>
         <Link to="/contact" className="nav-button">Contact</Link>
         <Link to="/cart" className="nav-button">Cart</Link>
       </div>
+      
     </nav>
   );
 };
 
+  
 export default Navbar;

@@ -12,31 +12,20 @@ function Products() {
 
   return (
     <div>
-      <h1>Products</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>description</th>
-            <th>img_url</th>
-            <th>Price</th>
-          </tr>
-        </thead>
-        <tbody>
-          {products.map(product => (
-            <tr key={product.id}>
-              <td>{product.id}</td>
-              <td>{product.name}</td>
-              <td>{product.description}</td>
-              <td>{product.img_url}</td>
-              <td>{product.price}</td>
-            </tr>
-          ))}
-        </tbody>
-      </table>
+      <h1 className="text-2xl font-bold text-blue-500"></h1>
+
+      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
+        {products.map(product => (
+          <div key={product.id} style={{ border: '1px solid #ccc', padding: '16px', borderRadius: '8px' }}>
+            <img src={product.img_url} alt="" style={{ width: '100%', height: 'auto' }} />
+            <h2>{product.name}</h2>
+            <p>{product.description}</p>
+            <p><strong>Price:</strong> ${product.price}</p>
+          </div>
+        ))}
+      </div>
     </div>
   );
-}
 
+}
 export default Products;

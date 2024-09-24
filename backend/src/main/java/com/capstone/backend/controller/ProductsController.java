@@ -19,4 +19,5 @@ public class ProductsController {
     public List<Products> getAllProducts() {
         return productsRepository.findAll();
     }
+
 }
