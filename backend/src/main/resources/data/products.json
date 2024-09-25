@@ -1,11 +1,11 @@
 [
-  {"name": "Spider Plant", "description": "Description 1", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115210/Spider_plant_ai4enz.jpg", "price": 10.0 },
-  {"name": "Product 2", "description": "Description 2", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115210/Spider_plant_ai4enz.jpg", "price": 20.0 },
-  {"name": "English Ivry", "description": "Description 3", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727114961/English_Ivy_Plant_fc2gw5.jpg", "price": 30.0 },
-  {"name": "Product 4", "description": "Description 4", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115032/front_page_trjorl.jpg", "price": 40.0 },
-  {"name": "Aloe", "description": "Description 5", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727114989/Aloe_Vera_lqfiaz.jpg", "price": 50.0 },
-  {"name": "Product 6", "description": "Description 6", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118096/Shop_nwngru.jpg", "price": 60.0 },
-  {"name": "Product 7", "description": "Description 7", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118096/Shop_nwngru.jpg", "price": 70.0 },
+  {"name": "ZZ Plant ", "description": "Description 1", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228251/ZZ_Plant_r5xszn.jpg", "price": 10.0 },
+  {"name": "ZZ Plant ", "description": "Description 2", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228211/ZZ_plant_Product_jitnci.jpg", "price": 20.0 },
+  {"name": "Snake Plant", "description": "Description 3", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228190/snake_Plant_Products_kofbyi.jpg", "price": 30.0 },
+  {"name": "Pothos Plant", "description": "Description 4", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228151/Pothos_Plant_Products_mystwi.jpg", "price": 40.0 },
+  {"name": "English Ivy", "description": "Description 5", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228123/Pothos_Plant_Product_fkegkw.jpg", "price": 50.0 },
+  {"name": "Aloe Plant", "description": "Description 6", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228105/Aloe_Vera_Product_cnfmrt.jpg", "price": 60.0 },
+  {"name": "Mixed Plants", "description": "Description 7", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118096/Shop_nwngru.jpg", "price": 70.0 },
   {"name": "Snake Plant", "description": "Description 8", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118073/Snake_muy125.jpg", "price": 80.0 },
   {"name": "Product 9", "description": "Description 9", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115210/Spider_plant_ai4enz.jpg", "price": 90.0 },
   {"name": "Product 10", "description": "Description 10", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115164/office_plant_refcax.jpg", "price": 100.0 }

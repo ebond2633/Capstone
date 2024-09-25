@@ -1,16 +1,20 @@
 import React from "react";
 import { Routes as R, Route } from "react-router-dom";
-import { Home, Login, Register, AuthWrapper, SingleItem, Cart } from "./";
-import Products from "./Products";
-import bgImage from "../assets/bgImage.jpeg";
+import { Login, Register, AuthWrapper, SingleItem, Cart } from "./";
+import Products from "./Products"; // Fixed import statement
+import Home from "./Home";
+// import bgImage from "../assets/bgImage.jpeg";
+import ContactForm from ".components/ContactForm";
+
+
 function ProtectedRoutes({ isLoggedIn, handleLogin }) {
   return (
     <R>
       <Route path="/" element={<Home />} />
       <Route path="/item/:id" element={<SingleItem />} />
       <Route path="/products" element={<Products />} /> {/* Fixed syntax error */}
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/bgImage" element={<img src={bgImage} alt="bgImage" />} />
+      <Route path="/contactform" element={<ContactForm />} />
+      <Route path="/bgImage" element={<img src={greenImage} alt="bgImage" />} />
       <Route 
         path="/login"
         element={

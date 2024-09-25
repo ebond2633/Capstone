@@ -33,8 +33,8 @@ public class RunJsonDataLoader implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         loadUsersData();
-//        loadProductsData();
-//        loadOrdersData();
+        loadProductsData();
+        loadOrdersData();
     }
 
     private void loadUsersData() throws IOException {
@@ -56,19 +56,19 @@ public class RunJsonDataLoader implements CommandLineRunner {
         }
     }
 
-//    private void loadProductsData() throws IOException {
-//        ObjectMapper mapper = new ObjectMapper();
-//        TypeReference<List<Products>> typeReference = new TypeReference<List<Products>>() {};
-//        InputStream inputStream = new ClassPathResource("data/products.json").getInputStream();
-//        List<Products> products = mapper.readValue(inputStream, typeReference);
-//        productsRepository.saveAll(products);
-//    }
-//
-//    private void loadOrdersData() throws IOException {
-//        ObjectMapper mapper = new ObjectMapper();
-//        TypeReference<List<Orders>> typeReference = new TypeReference<List<Orders>>() {};
-//        InputStream inputStream = new ClassPathResource("data/orders.json").getInputStream();
-//        List<Orders> orders = mapper.readValue(inputStream, typeReference);
-//        ordersRepository.saveAll(orders);
-//    }
+    private void loadProductsData() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        TypeReference<List<Products>> typeReference = new TypeReference<List<Products>>() {};
+        InputStream inputStream = new ClassPathResource("data/products.json").getInputStream();
+        List<Products> products = mapper.readValue(inputStream, typeReference);
+        productsRepository.saveAll(products);
+    }
+
+    private void loadOrdersData() throws IOException {
+        ObjectMapper mapper = new ObjectMapper();
+        TypeReference<List<Orders>> typeReference = new TypeReference<List<Orders>>() {};
+        InputStream inputStream = new ClassPathResource("data/orders.json").getInputStream();
+        List<Orders> orders = mapper.readValue(inputStream, typeReference);
+        ordersRepository.saveAll(orders);
+    }
 }
