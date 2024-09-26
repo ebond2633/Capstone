@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Products from './Products';
+
 
 export default function Cart({ cartItems = [], updateQuantity, removeItem }) {
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const itemsPerPage = 4;
 
   const total = cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0);

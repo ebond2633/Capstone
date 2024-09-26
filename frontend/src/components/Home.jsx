@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import PlantCard from '../components/PlantCard';
 import greenImage from '../assets/greenImage.jpg';
-
+// import Login from '.components/Login';
 
 
 export default function Home() {
@@ -43,15 +43,15 @@ export default function Home() {
  <p></p>
 
       </header>
-      <main className="container mx-auto p-4">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+     <main className="container mx-auto p-4"> 
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
           {plants.map(plant => (
             <Link to={`/plant/${plant.id}`} key={plant.id}>
               <PlantCard plant={plant} />
             </Link>
-          ))}
-        </div>
-      </main>
+          ))}kxb
+         </div> 
+       </main> 
       <img src={greenImage} alt="" style={{width: '100%'}} />
     
     </div>

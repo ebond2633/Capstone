@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 
-const Navbar = () => {
+const Navbar = ({isLoggedIn, handleLogout }) => {
   return (
     <nav
       style={{
@@ -26,10 +26,10 @@ const Navbar = () => {
       >
         
         <Link to="/" className=" nav-button">Home</Link>
-        <Link to="/about" className="nav-button">About</Link>
         <Link to="/products" className="nav-button">Products</Link>
-        <Link to="/contactform" className="nav-button">Contact</Link>
         <Link to="/cart" className="nav-button">Cart</Link>
+        <Link to="/register" className="nav-button">Register</Link>
+        <Link to="/login" className="nav-button">Login</Link>
       </div>
       
     </nav>
