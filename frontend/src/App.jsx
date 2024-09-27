@@ -1,4 +1,4 @@
-
+import React from 'react'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Header from './components/Header'
@@ -11,6 +11,8 @@ import Cart from './components/Cart'
 import { useState } from 'react'
 import Navbar from './components/NavBar'
 import Register from './components/Register'
+import PaymentForm from './components/Paymentforms'
+import StripeContainer from './components/StripeContainer'
 
 
 function App() {
@@ -37,8 +39,8 @@ function App() {
             <Route path="/contactForm" element={<ContactForm />} />
             <Route path="/cart" element={<Cart/>} />
             <Route path="/register" element={<Register/>} />
-       
-           
+            <Route path="/paymentforms" element={<PaymentForm/>} />
+            <Route path="/stripecontainer" element={<StripeContainer/>} />
             
            </Routes>
         <Footer/>

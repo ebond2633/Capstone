@@ -5,7 +5,7 @@ function Login({ handleLogin }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const Navigate = useNavigate();
+  const navigate = useNavigate();
 
   const decryptPassword = async (encryptedPassword, key, iv) => {
     const decoder = new TextDecoder();
@@ -48,8 +48,7 @@ function Login({ handleLogin }) {
       if (storedUser.email === email && decryptedPassword === password) {
         console.log("Login successful"); 
         handleLogin();
-        Navigate("/Home");
-      
+        navigate("/");
       } else {
         setError("Invalid email or password");
       }
@@ -60,48 +59,66 @@ function Login({ handleLogin }) {
   };
 
   return (
-    <form className="space-y-6" onSubmit={handleSubmit}>
-      {error && <p className="text-red-500">{error}</p>}
-      <div>
-        <label htmlFor="email" className="block text-sm font-medium text-onyx">
-          Email
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          required
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          className="mt-1 block w-full px-3 py-2 bg-timberwolf border border-onyx rounded-md shadow-sm focus:outline-none focus:ring-keppel focus:border-keppel"
+    <div className="relative flex items-center justify-center min-h-screen overflow-hidden">
+      <video 
+        className="absolute w-auto min-w-full min-h-full max-w-none"
+        autoPlay
+        muted
+        loop
+        playsInline
+      >
+        <source 
+          src="https://res.cloudinary.com/demo/video/upload/v1611684567/samples/elephants.mp4" 
+          type="video/mp4"
         />
+        Your browser does not support the video tag.
+      </video>
+      <div className="relative z-10 w-full max-w-md px-6 py-12 bg-white bg-opacity-80 rounded-lg shadow-xl">
+        <h2 className="text-3xl font-bold text-center text-gray-800 mb-8">Login</h2>
+        <form onSubmit={handleSubmit}>
+          {error && <p className="text-red-500 text-xs italic mb-4">{error}</p>}
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            />
+          </div>
+          <div className="mb-6">
+            <label
+              htmlFor="password"
+              className="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              required
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              className="w-full px-3 py-2 bg-white border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+            />
+          </div>
+          <div>
+            <button
+              type="submit"
+              className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            >
+              Sign In
+            </button>
+          </div>
+        </form>
       </div>
-      <div>
-        <label
-          htmlFor="password"
-          className="block text-sm font-medium text-onyx"
-        >
-          Password
-        </label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          required
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          className="mt-1 block w-full px-3 py-2 bg-timberwolf border border-onyx rounded-md shadow-sm focus:outline-none focus:ring-keppel focus:border-keppel"
-        />
-      </div>
-      <div>
-        <button
-          type="submit"
-          className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-platinum bg-saffron hover:bg-keppel focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-keppel"
-        >
-          Sign In
-        </button>
-      </div>
-    </form>
+    </div>
   );
 }
 

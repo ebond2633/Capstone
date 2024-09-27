@@ -5,6 +5,8 @@ import Products from "./Products"; // Fixed import statement
 import Home from "./Home";
 // import bgImage from "../assets/bgImage.jpeg";
 import ContactForm from ".components/ContactForm";
+import PaymentForms from ".components/PaymentForms";
+import StripeContainer from "./StripeContainer";
 
 
 function ProtectedRoutes({ isLoggedIn, handleLogin }) {
@@ -14,6 +16,8 @@ function ProtectedRoutes({ isLoggedIn, handleLogin }) {
       <Route path="/item/:id" element={<SingleItem />} />
       <Route path="/products" element={<Products />} /> {/* Fixed syntax error */}
       <Route path="/contactform" element={<ContactForm />} />
+      <Route path="/PaymentForm" element={<PaymentForms />} />
+      <Route path="/stripeContainer" element={<StripeContainer />} />
       <Route path="/bgImage" element={<img src={greenImage} alt="bgImage" />} />
       <Route 
         path="/login"
