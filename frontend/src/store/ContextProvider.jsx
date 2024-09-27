@@ -1,7 +1,7 @@
 import React, { createContext, useReducer } from "react";
 //import { users, products } from "../data";
 
-export const StoreProvider = createContext();
+export const StoreContext = createContext();
 
 const initialState = {
   //users,
@@ -13,13 +13,14 @@ function reducer(state, action) {
   switch (action.type) {
     case "ADD_TO_CART":
       const existingItem = state.cart.find(
-        (item) => item.id === action.payload.id
+        (item) => item.id === action.payload.productID
       );
+      console.log("existing item:", action.payload);
       if (existingItem) {
         return {
           ...state,
           cart: state.cart.map((item) =>
-            item.id === action.payload.id
+            item.id === action.payload.productID
               ? { ...item, quantity: item.quantity + 1 }
               : item
           ),
@@ -33,13 +34,13 @@ function reducer(state, action) {
     case "REMOVE_FROM_CART":
       return {
         ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload),
+        cart: state.cart.filter((item) => item.id !== action.payload.productID),
       };
     case "UPDATE_QUANTITY":
       return {
         ...state,
         cart: state.cart.map((item) =>
-          item.id === action.payload.id
+          item.id === action.payload.productID
             ? { ...item, quantity: action.payload.quantity }
             : item
         ),
@@ -53,8 +54,8 @@ export function ContextProvider({ children }) {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <StoreProvider.Provider value={{ state, dispatch }}>
+    <StoreContext.Provider value={{ state, dispatch }}>
       {children}
-    </StoreProvider.Provider>
+    </StoreContext.Provider>
   );
 }

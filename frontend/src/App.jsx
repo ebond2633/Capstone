@@ -13,6 +13,7 @@ import Navbar from './components/NavBar'
 import Register from './components/Register'
 import PaymentForm from './components/Paymentforms'
 import StripeContainer from './components/StripeContainer'
+import Checkout from './components/Contactform'
 
 
 function App() {
@@ -41,7 +42,7 @@ function App() {
             <Route path="/register" element={<Register/>} />
             <Route path="/paymentforms" element={<PaymentForm/>} />
             <Route path="/stripecontainer" element={<StripeContainer/>} />
-            
+            <Route path="/checkout" element={<Checkout/>} />
            </Routes>
         <Footer/>
       </div>

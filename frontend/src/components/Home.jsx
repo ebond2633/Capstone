@@ -12,8 +12,8 @@ function Home() {
   return (
     <div className="flex flex-col min-h-screen">
       <header className="bg-green-600 text-white p-4 sticky top-0 z-10">
-        <div className="container mx-auto flex justify-between items-center">
-          <h1 className="text-2xl font-bold text-pink-600"> Welcome to Verdant Elegance </h1>
+        <div className="container text-center  text-pink-600">
+          <h1> Welcome to Verdant Elegance </h1>
         </div>
       </header>
       <main className="container mx-auto p-4">

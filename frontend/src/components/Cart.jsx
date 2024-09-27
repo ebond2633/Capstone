@@ -1,11 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { StoreProvider } from "../store/ContextProvider";
+import { StoreContext } from "../store/ContextProvider";
 import { Trash2, Plus, Minus } from 'lucide-react';
+import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
-  const { state, dispatch } = useContext(StoreProvider);
+  const { state, dispatch } = useContext(StoreContext);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
+  const navigate = useNavigate();
 
   const updateQuantity = (id, newQuantity) => {
     if (newQuantity >= 1) {
@@ -30,6 +32,11 @@ export default function Cart() {
       setCurrentPage(currentPage - 1);
     }
   }, [currentItems.length, currentPage]);
+
+  const checkout = () => {
+    // Implement checkout logic here
+    navigate("/checkout");
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -106,7 +113,8 @@ export default function Cart() {
           )}
           <div className="mt-8 text-center">
             <h2 className="text-3xl font-bold mb-4">Total: ${total.toFixed(2)}</h2>
-            <button className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-lg font-semibold">
+            <button className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-lg font-semibold"
+            onClick={checkout}>
               Proceed to Checkout
             </button>
           </div>

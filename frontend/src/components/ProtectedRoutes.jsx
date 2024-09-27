@@ -7,6 +7,7 @@ import Home from "./Home";
 import ContactForm from ".components/ContactForm";
 import PaymentForms from ".components/PaymentForms";
 import StripeContainer from "./StripeContainer";
+import { Check } from "lucide-react";
 
 
 function ProtectedRoutes({ isLoggedIn, handleLogin }) {
@@ -19,6 +20,7 @@ function ProtectedRoutes({ isLoggedIn, handleLogin }) {
       <Route path="/PaymentForm" element={<PaymentForms />} />
       <Route path="/stripeContainer" element={<StripeContainer />} />
       <Route path="/bgImage" element={<img src={greenImage} alt="bgImage" />} />
+      <Route path='/checkout' element={<Checkout/>} />
       <Route 
         path="/login"
         element={

@@ -14,7 +14,7 @@ function AllItems() {
     e.stopPropagation();
     dispatch({ type: "ADD_TO_CART", payload: product });
   };
-
+  console.log(state.products);
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {state.products.map((product) => (
