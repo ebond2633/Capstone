@@ -34,9 +34,16 @@ function Home() {
     <div className="flex flex-col min-h-screen bg-green-50">
 
       <main className="container mx-auto p-8 flex-grow">
-        <h2 className="text-3xl font-bold text-green-800 mb-6">Our Collection</h2>
+        <h2 className="text-3xl font-bold text-green-800 mb-6">Welcome</h2>
 
-        <p>Hello</p>
+        <p>Welcome to Verdant Elegance, where we believe that nature’s beauty can transform any space into a sanctuary. Our mission is to infuse your home and office with the elegance of living greenery, creating a harmonious environment that uplifts your spirit and enhances your style.
+
+
+    At Verdant Elegance, we carefully curate a stunning selection of plants that not only add aesthetic charm but also contribute to a healthier planet. Each plant we offer is chosen for its ability to purify the air, boost your mood, and bring a touch of serenity to your surroundings.
+
+  Our knowledgeable team is passionate about sharing the benefits of indoor plants and guiding you in selecting the perfect green companions for your unique space. Whether you’re a seasoned plant parent or just beginning your journey, we’re here to help you cultivate a thriving indoor oasis.
+
+Join us in celebrating the elegance of nature—because when you bring plants into your life, you’re not just enhancing your space; you’re making a positive impact on the environment. Welcome to the Verdant Elegance family, where every leaf tells a story!</p>
         {/* {error && (
           <p className="text-red-500 bg-red-100 p-4 rounded-md mb-6">Error fetching plants: {error}</p>
         )} */}
