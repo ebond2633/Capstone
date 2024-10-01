@@ -2,42 +2,42 @@
   {
     "name": "ZZ Plant",
     "origin": "Africa",
-    "description": "A hardy plant with waxy, dark green leaves.",
+    "description": "The ZZ plant, with its thick, waxy leaves, excels at storing water. This enables it to endure long periods of drought and thrive in low-light environments. This attribute makes the plant particularly low maintenance, requiring water only when the soil is completely dry.\nThe ZZ plant is praised for its air-purifying capabilities, making it an ideal selection for those seeking both aesthetic appeal and functional benefits in a low-care package.\n",
     "img_url": "https://www.plantshed.com//media/catalog/product/p/s/ps20198-zz-10_growers.jpg",
     "price": 10.0
   },
   {
-    "name": "Hope Air Plant",
-    "origin": "South America",
-    "description": "A small, low-maintenance plant that thrives in bright light.",
-    "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/h/o/hope-rainbow-airplant-stand_b.jpg",
+    "name": "Spider Plant",
+    "origin": "South and West Africa",
+    "description": "Spider plants are highly adaptable and can flourish under various lighting conditions, from dim to brightly lit, making them an excellent choice for beginner gardeners. They demand very little watering and can bounce back quickly if left unattended for long periods.\nSpider plants are praised for their air-purifying properties, which make them capable of filtering out toxins and improving the air quality in your home, making them a beneficial addition to any room.\n",
+    "img_url": " https://cdn3.plants.com/wcsstore/Plants/images/catalog/spider_plant_177069smx.jpg ",
     "price": 20.0
   },
   {
     "name": "Snake Plant",
     "origin": "West Africa",
-    "description": "An easy-to-care-for plant with upright, sword-like leaves.",
+    "description": "Known scientifically as Sansevieria or colloquially as Mother-in-Law’s Tongue, Snake plants are quite hardy, thriving on minimal light and water, which suits those who might forget to water their plants or are often away from home.\nSnake plants are celebrated for their air-cleaning abilities, having been identified in NASA’s Clean Air Study for their ability to remove airborne toxins.\n",
     "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps20227_sansevieria_black_coral_14inch_lbe-black_1.jpg",
     "price": 30.0
   },
   {
     "name": "Pothos Plant",
     "origin": "Southeast Asia",
-    "description": "A popular houseplant with heart-shaped leaves.",
+    "description": "The Pothos plant can grow in a broad spectrum of light conditions and forgives irregular watering schedules. Scientifically referred to as Epipremnum aureum, the Pothos is acknowledged for its air-purifying ability. It helps enhance indoor air quality while adding a touch of greenery to your living space.",
     "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps20074-golden_pothos_6inch_plantlady_1.jpg",
     "price": 40.0
   },
   {
     "name": "English Ivy",
     "origin": "Europe",
-    "description": "A versatile plant that can be grown indoors or outdoors.",
+    "description": "English Ivy, with its elegant cascading vines and tolerance for low to moderate light, is a classic choice for adding a touch of sophistication to any space. It is low maintenance and can adapt to most indoor environments, so it is ideal for draping over shelves or hanging baskets. Beyond its visual appeal, English Ivy (Hedera helix) is effective at purifying the air.",
     "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228123/Pothos_Plant_Product_fkegkw.jpg",
     "price": 50.0
   },
   {
     "name": "Aloe Plant",
     "origin": "Arabian Peninsula",
-    "description": "A succulent plant known for its medicinal properties.",
+    "description": "Aloe Vera is praised for its vibrant green leaves and easy care, as well as for the medicinal gel it produces, which can soothe minor burns and skin irritations. Preferring bright, indirect light, Aloe Vera needs watering only when the soil has completely dried out, making it a drought-tolerant plant ideal for busy individuals.\nBesides its health benefits, Aloe Vera enhances indoor air quality by removing pollutants like formaldehyde and benzene, making it a practical and healthful addition to any home.\n",
     "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228105/Aloe_Vera_Product_cnfmrt.jpg",
     "price": 60.0
   },
@@ -45,7 +45,7 @@
     "name": "Mixed Plants",
     "origin": "Various",
     "description": "A collection of different plants in one pot.",
-    "img_url": "https://example.com/mixed_plants.jpg",
+    "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118096/Shop_nwngru.jpg",
     "price": 70.0
   },
   {

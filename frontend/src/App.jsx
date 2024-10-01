@@ -6,7 +6,7 @@ import Login from './components/Login';
 import Products from './components/Products';
 import Home from './components/Home';
 import Cart from './components/Cart';
-import Navbar from './components/NavBar';
+import Navbar from './components/Navbar';
 import Register from './components/Register';
 
 // import StripeContainer from './components/StripeContainer';
