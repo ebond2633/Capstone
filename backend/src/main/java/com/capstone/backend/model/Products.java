@@ -16,10 +16,13 @@ public class Products {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer productID;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String name;
 
     @Column(nullable = false)
+    private String origin;
+
+    @Column(nullable = false, length = 2000)
     private String description;
 
     @Column(nullable = false)

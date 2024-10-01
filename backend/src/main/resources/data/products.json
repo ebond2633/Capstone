@@ -1,12 +1,72 @@
 [
-  {"name": "ZZ Plant ", "description": "Description 1", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228251/ZZ_Plant_r5xszn.jpg", "price": 10.0 },
-  {"name": "ZZ Plant ", "description": "Description 2", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228211/ZZ_plant_Product_jitnci.jpg", "price": 20.0 },
-  {"name": "Snake Plant", "description": "Description 3", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228190/snake_Plant_Products_kofbyi.jpg", "price": 30.0 },
-  {"name": "Pothos Plant", "description": "Description 4", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228151/Pothos_Plant_Products_mystwi.jpg", "price": 40.0 },
-  {"name": "English Ivy", "description": "Description 5", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228123/Pothos_Plant_Product_fkegkw.jpg", "price": 50.0 },
-  {"name": "Aloe Plant", "description": "Description 6", "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228105/Aloe_Vera_Product_cnfmrt.jpg", "price": 60.0 },
-  {"name": "Mixed Plants", "description": "Description 7", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118096/Shop_nwngru.jpg", "price": 70.0 },
-  {"name": "Snake Plant", "description": "Description 8", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727118073/Snake_muy125.jpg", "price": 80.0 },
-  {"name": "Product 9", "description": "Description 9", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115210/Spider_plant_ai4enz.jpg", "price": 90.0 },
-  {"name": "Product 10", "description": "Description 10", "img_url": "https://res.cloudinary.com/dfq4l5osv/image/upload/v1727115164/office_plant_refcax.jpg", "price": 100.0 }
+  {
+    "name": "ZZ Plant",
+    "origin": "Africa",
+    "description": "A hardy plant with waxy, dark green leaves.",
+    "img_url": "https://www.plantshed.com//media/catalog/product/p/s/ps20198-zz-10_growers.jpg",
+    "price": 10.0
+  },
+  {
+    "name": "Hope Air Plant",
+    "origin": "South America",
+    "description": "A small, low-maintenance plant that thrives in bright light.",
+    "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/h/o/hope-rainbow-airplant-stand_b.jpg",
+    "price": 20.0
+  },
+  {
+    "name": "Snake Plant",
+    "origin": "West Africa",
+    "description": "An easy-to-care-for plant with upright, sword-like leaves.",
+    "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps20227_sansevieria_black_coral_14inch_lbe-black_1.jpg",
+    "price": 30.0
+  },
+  {
+    "name": "Pothos Plant",
+    "origin": "Southeast Asia",
+    "description": "A popular houseplant with heart-shaped leaves.",
+    "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps20074-golden_pothos_6inch_plantlady_1.jpg",
+    "price": 40.0
+  },
+  {
+    "name": "English Ivy",
+    "origin": "Europe",
+    "description": "A versatile plant that can be grown indoors or outdoors.",
+    "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228123/Pothos_Plant_Product_fkegkw.jpg",
+    "price": 50.0
+  },
+  {
+    "name": "Aloe Plant",
+    "origin": "Arabian Peninsula",
+    "description": "A succulent plant known for its medicinal properties.",
+    "img_url": "https://res.cloudinary.com/dhxugmddf/image/upload/v1727228105/Aloe_Vera_Product_cnfmrt.jpg",
+    "price": 60.0
+  },
+  {
+    "name": "Mixed Plants",
+    "origin": "Various",
+    "description": "A collection of different plants in one pot.",
+    "img_url": "https://example.com/mixed_plants.jpg",
+    "price": 70.0
+  },
+  {
+    "name": "Alocasia Polly",
+    "origin": "Asia",
+    "description": "A striking plant with large, arrow-shaped leaves.",
+    "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps20247-alocasia-polly-4_blue_ceramic_cylinder_saucer_1.jpg",
+    "price": 80.0
+  },
+  {
+    "name": "Leaf Care Spray",
+    "origin": "USA",
+    "description": "A spray to keep your plant leaves healthy and shiny.",
+    "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps23175_the_plant_supply_leaf_care_spray_a.jpg",
+    "price": 90.0
+  },
+  {
+    "name": "Leaf Care Spray Refill",
+    "origin": "USA",
+    "description": "A refill for the leaf care spray.",
+    "img_url": "https://www.plantshed.com//media/catalog/product/cache/1/small_image/551x/9df78eab33525d08d6e5fb8d27136e95/p/s/ps23176_the_plant_supply_leaf_care_spray_refill_a.jpg",
+    "price": 100.0
+  }
 ]

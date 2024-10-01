@@ -1,61 +1,32 @@
+// src/context/ContextProvider.jsx
 import React, { createContext, useReducer } from "react";
-//import { users, products } from "../data";
-
-export const StoreContext = createContext();
 
 const initialState = {
-  //users,
-  //products,
+  products: [
+    // Example products
+    { id: 1, name: "Product 1", description: "Description 1", price: 100, quantity: 1 },
+    { id: 2, name: "Product 2", description: "Description 2", price: 200 , quantity: 1 },
+  ],
   cart: [],
 };
 
-function reducer(state, action) {
+const reducer = (state, action) => {
   switch (action.type) {
     case "ADD_TO_CART":
-      const existingItem = state.cart.find(
-        (item) => item.id === action.payload.productID
-      );
-      console.log("existing item:", action.payload);
-      if (existingItem) {
-        return {
-          ...state,
-          cart: state.cart.map((item) =>
-            item.id === action.payload.productID
-              ? { ...item, quantity: item.quantity + 1 }
-              : item
-          ),
-        };
-      } else {
-        return {
-          ...state,
-          cart: [...state.cart, { ...action.payload, quantity: 1 }],
-        };
-      }
-    case "REMOVE_FROM_CART":
-      return {
-        ...state,
-        cart: state.cart.filter((item) => item.id !== action.payload.productID),
-      };
-    case "UPDATE_QUANTITY":
-      return {
-        ...state,
-        cart: state.cart.map((item) =>
-          item.id === action.payload.productID
-            ? { ...item, quantity: action.payload.quantity }
-            : item
-        ),
-      };
+      return { ...state, cart: [...state.cart, action.payload] };
     default:
       return state;
   }
-}
+};
 
-export function ContextProvider({ children }) {
+export const StoreProvider = createContext();
+
+export const ContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <StoreContext.Provider value={{ state, dispatch }}>
+    <StoreProvider.Provider value={{ state, dispatch }}>
       {children}
-    </StoreContext.Provider>
+    </StoreProvider.Provider>
   );
-}
+};

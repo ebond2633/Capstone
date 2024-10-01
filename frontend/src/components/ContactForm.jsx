@@ -1,13 +1,13 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import { StoreContext } from '../store/ContextProvider' // Adjust the import according to your project structure
-import PaymentForms from './PaymentForms';
+import { StoreProvider } from '../store/ContextProvider' // Adjust the import according to your project structure
+import PaymentForms from './PaymentForm';
 
 const stripePromise = loadStripe('your_stripe_public_key');
 
 export default function Checkout() {
-  const { state } = useContext(StoreContext);
+  const { state } = useContext(StoreProvider);
   const [clientSecret, setClientSecret] = useState('');
 
   useEffect(() => {

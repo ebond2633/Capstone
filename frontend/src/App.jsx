@@ -1,20 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Login from './components/Login';
+import Products from './components/Products';
+import Home from './components/Home';
+import Cart from './components/Cart';
+import Navbar from './components/NavBar';
+import Register from './components/Register';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Header from './components/Header'
-import Footer from './components/Footer'
-import Login from './components/Login'
-import Products from './components/Products'
-import Home from './components/Home'
-import ContactForm from './components/Contactform'
-import Cart from './components/Cart'
-import { useState } from 'react'
-import Navbar from './components/NavBar'
-import Register from './components/Register'
-import PaymentForm from './components/Paymentforms'
-import StripeContainer from './components/StripeContainer'
-import Checkout from './components/Contactform'
-
+// import StripeContainer from './components/StripeContainer';
+import Checkout from './components/Checkout';
+import SingleItem from './components/SingleItem';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,28 +23,27 @@ function App() {
   const handleLogout = () => {
     setIsLoggedIn(false);
   };
-  
 
   return (
-   
-      <div className="flex flex-col min-h-screen">
+ <>
+      <Header />
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login handleLogin={handleLogin} />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/products" element={<Products />} />
         
-        <Navbar isLoggedIn={isLoggedIn} handleLogout={handleLogout} />
-          <Routes>
-           <Route path="/" element={<Home/>} />
-            <Route path="/products" element={<Products />} />
-            <Route path="/login" element={<Login handleLogin={handleLogin}/>} />
-            <Route path="/contactForm" element={<ContactForm />} />
-            <Route path="/cart" element={<Cart/>} />
-            <Route path="/register" element={<Register/>} />
-            <Route path="/paymentforms" element={<PaymentForm/>} />
-            <Route path="/stripecontainer" element={<StripeContainer/>} />
-            <Route path="/checkout" element={<Checkout/>} />
-           </Routes>
-        <Footer/>
-      </div>
- 
-  )
+        {/* <Route path="/contactform" element={<ContactForm />} /> */}
+        <Route path="/cart" element={<Cart />} />
+        {/* <Route path="/paymentform" element={<PaymentForm />} />
+        <Route path="/stripecontainer" element={<StripeContainer />} /> */}
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/products/:id" element={<SingleItem />} />
+      </Routes>
+      <Footer />
+      </>
+  );
 }
 
 export default App;

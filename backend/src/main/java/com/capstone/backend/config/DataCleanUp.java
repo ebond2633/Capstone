@@ -33,9 +33,10 @@ public class DataCleanUp {
             try (
                 Connection connection = dataSource.getConnection()){
                 Statement statement = connection.createStatement();
-                    statement.executeUpdate("DROP TABLE IF EXISTS products");
+                statement.executeUpdate("DROP TABLE IF EXISTS orders");
+
+                statement.executeUpdate("DROP TABLE IF EXISTS products");
                     statement.executeUpdate("DROP TABLE IF EXISTS users");
-                    statement.executeUpdate("DROP TABLE IF EXISTS orders");
 
                     logger.info("Tables dropped successfully");
 

@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { useNavigate } from "react-router-dom";
-import { StoreContext } from "../store/ContextProvider";
+import { Link, useNavigate } from "react-router-dom";
+import { StoreProvider } from "../store/ContextProvider";
 
 function Products() {
   const [products, setProducts] = useState([]);
-  const { state, dispatch } = useContext(StoreContext);
+  const { state, dispatch } = useContext(StoreProvider);
   const navigate = useNavigate();
 
   const handleItemClick = (id) => {
@@ -13,7 +13,8 @@ function Products() {
 
   const addToCart = (e, product) => {
     e.stopPropagation();
-    dispatch({ type: "ADD_TO_CART", payload: product });
+    const newProduct = { ...product, quantity: 1 };
+    dispatch({ type: "ADD_TO_CART", payload: newProduct});
   };
 
   useEffect(() => {
@@ -22,7 +23,7 @@ function Products() {
       .then(data => setProducts(data))
       .catch(error => console.error('Error fetching products:', error));
   }, []);
-  // console.log(products);
+  console.log(products);
   return (
     <div className="bg-white">
       <div className="container mx-auto px-4 py-16 sm:px-6 sm:py-24">
@@ -34,6 +35,7 @@ function Products() {
               className="group cursor-pointer"
               onClick={() => handleItemClick(product.productID)}
             >
+            <Link to={`/singleItem/${product.productID}`}   >
               <div className="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 mb-4">
                 <img
                   alt={product.description}
@@ -41,11 +43,12 @@ function Products() {
                   className=" w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300 h-40"
                 />
               </div>
+              </Link>
               <h3 className="text-sm text-gray-700">{product.productID}</h3>
               <p className="mt-1 text-lg font-medium text-gray-900">${product.price}</p>
               <button
                 onClick={(e) => {
-                  console.log("product:",product);
+                  navigate(`/products/${product.productID}`);
                   addToCart(e, product)}}
                 className="mt-2 w-full bg-green-500 text-white py-2 px-4 rounded hover:bg-pink-600 transition-colors duration-300"
               >

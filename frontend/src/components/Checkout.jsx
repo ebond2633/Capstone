@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
-import PaymentForms from '.components/PaymentForms';
-import StripeContainer from './StripeContainer';
+// import StripeContainer from './StripeContainer';
+import React, { useState } from 'react';
 
-const stripePromise = loadStripe('your_stripe_public_key');
+const stripePromise = loadStripe('pk_test_51Q3O4GK0R0a8fZRVIA97A9NVsac6NzY3jVeKV6t24DIbepujuR7q05n8bJFkW8A0l16skVMiVrDQMnNYdyyvNpWz00H7Ar0Bwj');
 
 export default function Checkout() {
   const [clientSecret, setClientSecret] = useState('');
@@ -23,21 +22,42 @@ export default function Checkout() {
   };
 
   return (
+    <>
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-2xl font-bold mb-4">Checkout</h1>
       <button
         onClick={handlePayment}
         className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors text-lg font-semibold mb-4"
       >
-        Proceed to Payment
+        Pay Now
       </button>
       {clientSecret && (
         <Elements stripe={stripePromise} options={{ clientSecret }}>
-          <StripeContainer>
-            <PaymentForms />
-          </StripeContainer>
+          <PaymentForm />
         </Elements>
       )}
     </div>
+    </>
   );
 }
+
+
+// import {Elements} from '@stripe/react-stripe-js';
+// import {loadStripe} from '@stripe/stripe-js';
+
+// // Make sure to call `loadStripe` outside of a component’s render to avoid
+// // recreating the `Stripe` object on every render.
+// const stripePromise = loadStripe('sk_test_51Q3O4GK0R0a8fZRVsofpY0TaNQ3p4bGVfM22F39Smls8aHQMvmqWe1bdcz4IacfKzhNPoTBEVveJfOiBOn58vJET00KFUank0S');
+
+// export default function App() {
+//   const options = {
+//     // passing the client secret obtained from the server
+//     clientSecret: '{{CLIENT_SECRET}}',
+//   };
+
+//   return (
+//     <Elements stripe={stripePromise} options={options}>
+//       <CheckoutForm />
+//     </Elements>
+//   );
+// };

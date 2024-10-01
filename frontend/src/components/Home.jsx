@@ -6,7 +6,7 @@ import greenImage from '../assets/greenImage.jpg';
 function Home() {
   const [plants, setPlants] = useState([]);
   const [error, setError] = useState(null);
-
+  
   
 
   return (
@@ -15,6 +15,7 @@ function Home() {
         <div className="container text-center  text-pink-600">
           <h1> Welcome to Verdant Elegance </h1>
         </div>
+       
       </header>
       <main className="container mx-auto p-4">
         {error && <p className="text-red-500">Error fetching plants: {error}</p>}

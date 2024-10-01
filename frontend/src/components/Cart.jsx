@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from 'react';
-import { StoreContext } from "../store/ContextProvider";
+import { StoreProvider } from "../store/ContextProvider";
 import { Trash2, Plus, Minus } from 'lucide-react';
 import { useNavigate } from "react-router-dom";
 
 export default function Cart() {
-  const { state, dispatch } = useContext(StoreContext);
+  const { state, dispatch } = useContext(StoreProvider);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 4;
   const navigate = useNavigate();
@@ -19,7 +19,8 @@ export default function Cart() {
     dispatch({ type: "REMOVE_FROM_CART", payload: id });
   };
 
-  const total = state.cart.reduce((sum, item) => sum + item.price * item.quantity, 0);
+  const total = state.cart.reduce((sum, item) => sum + item.price, 0);
+
 
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
@@ -34,7 +35,7 @@ export default function Cart() {
   }, [currentItems.length, currentPage]);
 
   const checkout = () => {
-    // Implement checkout logic here
+    // This is where you would send the cart data to the server
     navigate("/checkout");
   };
 
@@ -52,7 +53,7 @@ export default function Cart() {
         <>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {currentItems.map((item) => (
-              <div key={item.id} className="bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden">
+              <div key={item.id} className="bg-White border border-gray-200 rounded-lg shadow-md overflow-hidden">
                 <img src={item.img_url || "/placeholder.svg?height=200&width=200"} alt={item.name} className="w-full h-48 object-cover" />
                 <div className="p-4">
                   <h3 className="text-xl font-semibold mb-2">{item.name}</h3>
