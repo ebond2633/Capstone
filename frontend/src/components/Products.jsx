@@ -40,7 +40,7 @@ function Products() {
                 <img
                   alt={product.description}
                   src={product.img_url}
-                  className=" w-full object-cover object-center group-hover:opacity-75 transition-opacity duration-300 h-40"
+                  className=" w-full object-contain object-center group-hover:opacity-75 transition-opacity duration-300 h-40"
                 />
               </div>
               </Link>

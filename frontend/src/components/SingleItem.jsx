@@ -37,15 +37,22 @@ const SingleItem = () => {
   };
 
   return (
-    <div>
-      <img src={item.img_url} alt={item.name} />
-      <h1>{item.name}</h1>
-      <p>{item.description}</p>
-      <p>Price: ${item.price}</p> 
-      <button  onClick={(e) => {
-        navigate(`/cart`)
-        addToCart(e, item); }} >Add to Cart</button>
-     
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-black to-gray-500 ">
+      <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+        <img src={item.img_url} alt={item.name} className="w-full h-auto mb-4 rounded" />
+        <h1 className="text-2xl font-bold mb-2">{item.name}</h1>
+        <p className="text-gray-700 mb-4">{item.description}</p>
+        <p className="text-xl font-semibold mb-4">Price: ${item.price}</p>
+        <button
+          onClick={(e) => {
+            navigate(`/cart`);
+            addToCart(e, item);
+          }}
+          className="w-full bg-green-500 text-white py-2 px-4 rounded-lg hover:bg-green-600"
+        >
+          Add to Cart
+        </button>
+      </div>
     </div>
   );
 };
