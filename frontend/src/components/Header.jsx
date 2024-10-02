@@ -47,10 +47,10 @@ export default function Header() {
             <Link to="/about" className="hover:text-green-200 transition-colors">About</Link>
             <Link to="/contact" className="hover:text-green-200 transition-colors">Contact</Link> */}
           </nav>
-          <Link to="/cart" className="inline-flex items-center space-x-2 text-white hover:text-green-200 transition-colors">
+          {/* <Link to="/cart" className="inline-flex items-center space-x-2 text-white hover:text-green-200 transition-colors">
             <ShoppingCart size={24} />
             <span className="sr-only md:not-sr-only">Cart</span>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </header>

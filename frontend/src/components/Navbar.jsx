@@ -31,8 +31,13 @@ const Navbar = ({ isLoggedIn, handleLogout }) => {
           <div className={`md:flex items-center space-x-6 ${isMenuOpen ? 'flex flex-col absolute top-full left-0 right-0 bg-green-800 py-4' : 'hidden'}`}>
             <Link to="/" className="nav-link">Home</Link>
             <Link to="/products" className="nav-link">Products</Link>
-            {/* <Link to="/about" className="nav-link">About</Link> */}
-            <Link to="/contact" className="nav-link">Contact</Link>
+            <Link to="/register" className="nav-link">Register</Link>
+            <Link to="/login" className="nav-link">Login</Link>
+            <Link to="/cart" className="inline-flex items-center space-x-2 text-white hover:text-green-200 transition-colors">
+            <ShoppingCart size={24} />
+            <span className="sr-only md:not-sr-only">Cart</span>
+          </Link>
+           =
             {isLoggedIn ? (
               <>
                 <Link to="/profile" className="nav-link flex items-center">
@@ -44,10 +49,11 @@ const Navbar = ({ isLoggedIn, handleLogout }) => {
                   Logout
                 </button>
               </>
+              
             ) : (
               <>
-                <Link to="/register" className="nav-link">Register</Link>
-                <Link to="/login" className="nav-link">Login</Link>
+                {/* <Link to="/register" className="nav-link">Register</Link>
+                <Link to="/login" className="nav-link">Login</Link> */}
               </>
             )}
            
