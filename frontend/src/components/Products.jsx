@@ -62,25 +62,6 @@ function Products() {
  
 
 
-    // <div>
-    //   <h1 className="text-2xl font-bold text-blue-500 mb-4">Products</h1>
-    //   <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(200px, 1fr))', gap: '16px' }}>
-    //     {products.map(product => (
-    //       <div key={product.id} style={{ border: '1px solid #ccc', padding: '16px', borderRadius: '8px' }}>
-    //         <img src={product.img_url} alt={product.name} style={{ width: '100%', height: 'auto' }} />
-    //         <h2>{product.name}</h2>
-    //         <p>{product.description}</p>
-    //         <p><strong>Price:</strong> ${product.price}</p>
-    //         <button
-    //         className="mt-4 bg-saffron text-onyx px-4 py-2 rounded hover:bg-keppel hover:text-platinum transition-colors"
-    //         onClick={(e) => addToCart(e, product)}
-    //       >
-    //         Add to Cart
-    //       </button>
-    //       </div>
-    //     ))}
-    //   </div>
-    // </div>
   );
 }
 

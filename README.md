@@ -98,4 +98,113 @@ Contributions are welcome! Please follow these steps:
 ##License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
+##Verdant Elegance - Backend
+
+Verdant Elegance backend serves as the foundation for the e-commerce platform, providing APIs for plant data management, user authentication, and payment processing. Built with Node.js and Express, this backend ensures secure and efficient communication between the client-side application and the database.
+
+Features
+-RESTful API: Provides endpoints for managing plants, users, and orders, allowing the frontend to perform CRUD operations efficiently.
+-User Authentication: Implements JWT (JSON Web Token) for secure user authentication and session management.
+-Plant Management: Admin capabilities for adding, updating, and deleting plant entries in the database.
+-Cart Management: API endpoints for managing the user's shopping cart, including adding items, updating quantities, and removing items.
+-Payment Processing: Integrates with Stripe for handling payment intents and processing transactions securely.
+-Error Handling: Centralized error handling middleware to manage and respond to errors gracefully.
+-Data Validation: Uses middleware to validate incoming data and ensure the integrity of requests.
+-CORS Support: Configured Cross-Origin Resource Sharing (CORS) to allow requests from the frontend application.
+
+Technologies Used
+
+-Node.js: A JavaScript runtime built on Chrome's V8 JavaScript engine, enabling server-side development.
+-Express: A minimal and flexible Node.js web application framework for building RESTful APIs.
+-MongoDB: A NoSQL database used for storing user data, plant information, and orders.
+-Mongoose: An ODM (Object Data Modeling) library for MongoDB and Node.js, providing a schema-based solution to model application data.
+-JSON Web Tokens (JWT): For secure user authentication and maintaining user sessions.
+-Stripe: A payment processing platform that enables secure online transactions.
+-dotenv: A zero-dependency module that loads environment variables from a .env file into process.env.
+-Body-parser: Middleware for parsing incoming request bodies in a middleware before handlers, available under the req.body property.
+-Nodemon: A utility that monitors changes in your source files and automatically restarts your server, making development more efficient.
+
+Project Structure
+verdant-elegance-backend/ ── config/                # Configuration files
+                         ├── db.js                 # Database connection configuration
+                         ├── stripe.js             # Stripe configuration
+                         
+                         ├── controllers/           # Controllers handling business logic
+                         │   ├── authController.js  # Authentication-related logic
+                         │   ├── plantController.js # Plant management logic
+                         │   └── cartController.js  # Cart management logic
+                         
+                         ├── models/                # Mongoose models representing data structures
+                         │   ├── User.js            # User schema and model
+                         │   ├── Plant.js           # Plant schema and model
+                         │   └── Order.js           # Order schema and model
+                         
+                         ├── routes/                # API route definitions
+                         │   ├── auth.js            # Authentication routes
+                         │   ├── plants.js          # Plant management routes
+                         │   └── cart.js            # Cart management routes
+                         
+                         ├── middleware/            # Custom middleware for handling requests
+                         │   ├── auth.js            # Authentication middleware
+                         │   └── errorHandler.js     # Error handling middleware
+                         
+                         ├── server.js              # Entry point for the Node.js application
+                         ├── .env                   # Environment variables
+                         ├── package.json            # Project metadata and dependencies
+                         └── README.md              # Project documentation
+
+                         Getting Started
+To get a local copy of the backend up and running, follow these steps:
+
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/your-username/verdant-elegance-backend.git
+Navigate to the project directory:
+
+bash
+Copy code
+cd verdant-elegance-backend
+Install dependencies:
+
+bash
+Copy code
+npm install
+Set up environment variables: Create a .env file in the root directory and add the following variables:
+
+plaintext
+Copy code
+PORT=5000
+MONGO_URI=your_mongo_database_uri
+JWT_SECRET=your_jwt_secret
+STRIPE_SECRET_KEY=your_stripe_secret_key
+Start the server:
+
+bash
+Copy code
+npm start
+Open your API client (e.g., Postman) and test the endpoints:
+
+Base URL: http://localhost:5000/api
+Example endpoints:
+POST /api/auth/login
+GET /api/plants
+POST /api/cart
+
+API Documentation
+For detailed information on the available API endpoints, request and response formats, and authentication, please refer to the API documentation.
+
+Contributing
+Contributions are welcome! Please follow these steps:
+
+-Fork the repository.
+-Create a feature branch.
+-Make your changes.
+-Commit your changes.
+-Push to the branch.
+-Open a pull request.
+
+License
+This project is licensed under the MIT License. See the LICENSE file for details.
 
