@@ -41,23 +41,3 @@ export default function Checkout() {
   );
 }
 
-
-// import {Elements} from '@stripe/react-stripe-js';
-// import {loadStripe} from '@stripe/stripe-js';
-
-// // Make sure to call `loadStripe` outside of a component’s render to avoid
-// // recreating the `Stripe` object on every render.
-// const stripePromise = loadStripe('sk_test_51Q3O4GK0R0a8fZRVsofpY0TaNQ3p4bGVfM22F39Smls8aHQMvmqWe1bdcz4IacfKzhNPoTBEVveJfOiBOn58vJET00KFUank0S');
-
-// export default function App() {
-//   const options = {
-//     // passing the client secret obtained from the server
-//     clientSecret: '{{CLIENT_SECRET}}',
-//   };
-
-//   return (
-//     <Elements stripe={stripePromise} options={options}>
-//       <CheckoutForm />
-//     </Elements>
-//   );
-// };

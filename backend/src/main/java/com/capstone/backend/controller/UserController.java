@@ -4,8 +4,11 @@ package com.capstone.backend.controller;
 import com.capstone.backend.common.UserRepository;
 import com.capstone.backend.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.HashMap;
 import java.util.List;
@@ -27,11 +30,13 @@ public class UserController {
         List<User> users = userRepository.findAll();
         return ResponseEntity.ok(users);
     }
-
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 @PostMapping("/createuser")
 public ResponseEntity<User> createUser(@RequestBody User user) {
+    user.setPassword(passwordEncoder.encode(user.getPassword()));
     User savedUser = userRepository.save(user);
-    return ResponseEntity.status(201).body(savedUser);
+    return new ResponseEntity<>(savedUser, HttpStatus.CREATED);
 }
 
 @PostMapping("/login")

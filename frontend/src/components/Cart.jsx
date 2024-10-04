@@ -16,6 +16,7 @@ export default function Cart() {
   };
 
   const removeItem = (id) => {
+    console.log(id)
     dispatch({ type: "REMOVE_FROM_CART", payload: id });
   };
 
@@ -35,7 +36,7 @@ export default function Cart() {
   }, [currentItems.length, currentPage]);
 
   const checkout = () => {
-    // This is where you would send the cart data to the server
+    // This is where the  cart  sends data to the server
     navigate("/checkout");
   };
 

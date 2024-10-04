@@ -9,8 +9,7 @@ export default function Header() {
     <header className="bg-gradient-to-r from-green-600 to-green-800 text-white p-4 sticky top-0 z-10 shadow-md">
       <div className="container mx-auto flex flex-wrap justify-between items-center">
         <Link to="/" className="flex items-center space-x-2 text-2xl font-bold">
-          {/* <Leaf size={32} />
-          <span>Verdant Elegance</span> */}
+        
         </Link>
         <button
           className="md:hidden"

@@ -8,8 +8,6 @@ import Home from './components/Home';
 import Cart from './components/Cart';
 import Navbar from './components/Navbar';
 import Register from './components/Register';
-
-// import StripeContainer from './components/StripeContainer';
 import Checkout from './components/Checkout';
 import SingleItem from './components/SingleItem';
 
@@ -33,11 +31,7 @@ function App() {
         <Route path="/login" element={<Login handleLogin={handleLogin} />} />
         <Route path="/register" element={<Register />} />
         <Route path="/products" element={<Products />} />
-        
-        {/* <Route path="/contactform" element={<ContactForm />} /> */}
         <Route path="/cart" element={<Cart />} />
-        {/* <Route path="/paymentform" element={<PaymentForm />} />
-        <Route path="/stripecontainer" element={<StripeContainer />} /> */}
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/products/:id" element={<SingleItem />} />
       </Routes>

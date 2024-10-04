@@ -66,16 +66,7 @@ Join us in celebrating the elegance of nature—because when you bring plants in
         </div>
       </div>
 
-      {/* <footer className="bg-green-800 text-white py-8">
-        <div className="container mx-auto text-center">
-          <p>&copy; 2024 Verdant Elegance. All rights reserved.</p>
-          <div className="mt-4 space-x-4">
-            <Link to="/about" className="hover:underline">About Us</Link>
-            <Link to="/contact" className="hover:underline">Contact</Link>
-            <Link to="/privacy" className="hover:underline">Privacy Policy</Link>
-          </div>
-        </div>
-      </footer> */}
+      
     </div>
   );
 }
