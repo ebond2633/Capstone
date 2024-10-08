@@ -26,6 +26,16 @@ public class ProductsController {
         return productsRepository.findById(id).orElse(null);
     }
 
+    @DeleteMapping("/products/delete/{id}")
+    public void deleteProduct(@PathVariable int id) {
+        productsRepository.deleteById(id);
+    }
+
+    @PutMapping("/products/update")
+    public Products updateProduct(@RequestBody Products product) {
+        return productsRepository.save(product);
+    }
+
     @PostMapping
     public ResponseEntity<Products> createProduct(@RequestBody Products product) {
 
